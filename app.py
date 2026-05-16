@@ -42,7 +42,7 @@ def generar_pdf(d):
     # Estilos personalizados
     style_normal = ParagraphStyle(name="NormalJustify", parent=styles["Normal"], alignment=TA_JUSTIFY, fontSize=11, leading=16)
     style_bold = ParagraphStyle(name="Bold", parent=styles["Normal"], fontSize=11, leading=16, fontName="Helvetica-Bold")
-    style_right = ParagraphStyle(name="Right", parent=styles["Normal"], alignment=TA_RIGHT, fontSize=11, leading=16)
+    style_right = ParagraphStyle(name="Right", parent=styles["Normal"], alignment=TA_JUSTIFY, fontSize=11, leading=16, leftIndent=240)
     style_center = ParagraphStyle(name="Center", parent=styles["Normal"], alignment=TA_CENTER, fontSize=11, leading=16)
     style_italic_indented = ParagraphStyle(name="ItalicIndented", parent=style_normal, leftIndent=30, fontSize=11, leading=16)
 
