@@ -50,7 +50,7 @@ def generar_pdf(d):
     texto = []
 
     # CONTENIDO EXACTO AL ORIGINAL
-    texto.append(Paragraph(f"<b>Sumilla:</b> Solicitud de suspensión de la ejecución coactiva del expediente {d['expediente']}", style_sumilla))
+    texto.append(Paragraph(f"<b>Sumilla: Solicitud de suspensión de la ejecución coactiva del expediente {d['expediente']}</b>", style_sumilla))
     texto.append(Spacer(1, 20))
     texto.append(Paragraph("<b>GERENTE DE OPERACIONES SAT - TRUJILLO</b>", style_normal))
     texto.append(Spacer(1, 10))
