@@ -5,6 +5,7 @@ from reportlab.lib.enums import TA_JUSTIFY, TA_RIGHT, TA_CENTER
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 import io
 from datetime import datetime
+import pytz
 
 # Configuración de la página
 st.set_page_config(page_title="Generador de Solicitud - SATT", page_icon="📄")
@@ -29,7 +30,8 @@ with st.form("datos_solicitud"):
         f_imposicion = st.text_input("Fecha de imposición")
         f_notificacion = st.text_input("Fecha de notificación de resolución")
         n_resolucion = st.text_input("Número de resolución de multa")
-        f_solicitud = st.text_input("Fecha de solicitud", value=datetime.now().strftime("%d/%m/%Y"))
+        tz_peru = pytz.timezone('America/Lima')
+        f_solicitud = st.text_input("Fecha de solicitud", value=datetime.now(tz_peru).strftime("%d/%m/%Y"))
 
     submit_button = st.form_submit_button("Generar PDF con Texto Completo")
 
